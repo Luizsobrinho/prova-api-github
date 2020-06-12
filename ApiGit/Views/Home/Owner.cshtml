@@ -1,0 +1,62 @@
+﻿@model IEnumerable<ApiGit.Models.Repositorio>
+@{
+    ViewData["Title"] = "Meu Repositorio";
+}
+
+<div class="main-content-inner">
+
+    <div class="card">
+
+        <div class="card-body">
+
+            <div class="col-sm-11">
+                <h4 class="header-title">Meu Repositório</h4>
+            </div>
+
+            <table class="table table-striped table-hover">
+
+                <thead>
+
+                    <tr class="success text-black-50">
+                        <th scope="col" style="text-align:center">
+                            Nome Repositorio
+                        </th>
+                        <th scope="col" style="text-align:center">
+                            Linguaguem
+                        </th>
+                        <th scope="col" style="text-align:center">
+                            Descrição
+                        </th>
+                        <th scope="col" style="text-align:center">
+                            Ultimo Update
+                        </th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td style="text-align:center">
+                                @Html.DisplayFor(modelItem => item.Nome)
+                            </td>
+                            <td style="text-align:center">
+                                @Html.DisplayFor(modelItem => item.Linguagem)
+                            </td>
+                            <td style="text-align:center">
+                                @Html.DisplayFor(modelItem => item.Descricao)
+
+                            </td>
+                            <td style="text-align:center">
+                                @Html.DisplayFor(modelItem => item.Data)
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+</div>

@@ -1,0 +1,70 @@
+﻿@model IEnumerable<ApiGit.Models.Favorito>
+
+@{
+    ViewData["Title"] = "Meus Favoritos";
+}
+
+<div class="main-content-inner">
+    <div class="card">
+        <div class="card-body">
+
+            <div class="col-sm-11">
+                <h4 class="header-title">Repositorios Favoritos</h4>
+            </div>
+
+            <table class="table table-striped table-hover">
+                <thead>
+                    <tr class="success text-black-50">
+                        <th style="text-align:center">
+                            @Html.DisplayNameFor(model => model.Nome)
+                        </th>
+                        <th style="text-align:center">
+                            @Html.DisplayNameFor(model => model.Descricao)
+                        </th>
+                        <th style="text-align:center">
+                            @Html.DisplayNameFor(model => model.Linguagem)
+                        </th>
+                        <th style="text-align:center">
+                            @Html.DisplayNameFor(model => model.DataUltimoUpdate)
+                        </th>
+                        <th style="text-align:center">
+                            @Html.DisplayNameFor(model => model.UrlHtml)
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    @if (Model != null)
+                    {
+
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Nome)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Descricao)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Linguagem)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.DataUltimoUpdate)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.UrlHtml)
+                                </td>
+                            </tr>
+
+                        }
+
+                    }
+                </tbody>
+            </table>
+
+        </div>
+
+
+    </div>
+</div>

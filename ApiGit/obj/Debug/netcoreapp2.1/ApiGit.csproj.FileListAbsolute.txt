@@ -1,0 +1,4 @@
+C:\Users\luizs\source\repos\ApiGit\ApiGit\obj\Debug\netcoreapp2.1\ApiGit.csprojAssemblyReference.cache
+C:\Users\luizs\source\repos\ApiGit\ApiGit\obj\Debug\netcoreapp2.1\ApiGit.csproj.CoreCompileInputs.cache
+C:\Users\luizs\source\repos\ApiGit\ApiGit\obj\Debug\netcoreapp2.1\ApiGit.AssemblyInfoInputs.cache
+C:\Users\luizs\source\repos\ApiGit\ApiGit\obj\Debug\netcoreapp2.1\ApiGit.AssemblyInfo.cs

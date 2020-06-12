@@ -1,0 +1,71 @@
+﻿@model IEnumerable<ApiGit.Models.Repositorio>
+
+@{
+    ViewData["Title"] = "Repositorio";
+}
+
+<div class="main-content-inner">
+
+    <div class="card">
+
+        <div class="card-body">
+
+            <div class="col-sm-11">
+                <h4 class="header-title">Repositorios Detalhes</h4>
+            </div>
+
+            <table class="table table-striped table-hover">
+
+                <thead>
+
+                    <tr class="success text-black-50">
+                        <th scope="col" style="text-align:center">
+                            @Html.DisplayNameFor(model => model.Nome)
+                        </th>
+                        <th scope="col" style="text-align:center">
+                            @Html.DisplayNameFor(model => model.Linguagem)
+                        </th>
+                        <th scope="col" style="text-align:center">
+                            @Html.DisplayNameFor(model => model.Descricao)
+                        </th>
+                        <th scope="col" style="text-align:center">
+                            @Html.DisplayNameFor(model => model.Data)
+                        </th>
+                        <th scope="col" style="text-align:center">
+                            Favoritar
+                        </th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td style="text-align:center">
+                                @Html.DisplayFor(modelItem => item.Nome)
+                            </td>
+                            <td style="text-align:center">
+                                @Html.DisplayFor(modelItem => item.Descricao)
+                            </td>
+                            <td style="text-align:center">
+                                @Html.DisplayFor(modelItem => item.Linguagem)
+                            </td>
+                            <td style="text-align:center">
+                                @Html.DisplayFor(modelItem => item.Data)
+                            </td>
+                            <td style="text-align:center">
+                                <a>@Html.ActionLink(@String.Format("Favoritar"), "Favoritar", "Repositorio", new { url = item.Url })</a>
+
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+
+
+
+</div>
